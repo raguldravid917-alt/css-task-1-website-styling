@@ -1,0 +1,153 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: radial-gradient(circle at top left, #4f46e5, #0f172a);
+  color: #0f172a;
+}
+
+/* Wrapper to center card */
+.wrapper {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.97);
+  max-width: 420px;
+  width: 100%;
+  padding: 30px 26px;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+  backdrop-filter: blur(14px);
+}
+
+/* Typography */
+.title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111827;
+  text-shadow: 0 1px 2px rgba(15, 23, 42, 0.15);
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.form input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1.5px solid #d1d5db;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.1s ease;
+}
+
+/* Focus state */
+.form input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Buttons */
+.btn-primary,
+.btn-ghost {
+  margin-top: 6px;
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.15s ease;
+}
+
+/* Gradient primary button */
+.btn-primary {
+  background: linear-gradient(135deg, #4f46e5, #6366f1, #a855f7);
+  color: #f9fafb;
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.45);
+}
+
+/* Hover + active states for primary button */
+.btn-primary:hover {
+  box-shadow: 0 14px 28px rgba(79, 70, 229, 0.65);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 6px 14px rgba(79, 70, 229, 0.45);
+}
+
+/* Secondary (ghost) button */
+.btn-ghost {
+  background: transparent;
+  color: #4b5563;
+  border: 1.5px solid #e5e7eb;
+}
+
+/* Hover + active states for ghost button */
+.btn-ghost:hover {
+  background: #f3f4ff;
+  border-color: #c7d2fe;
+  color: #111827;
+  transform: translateY(-1px);
+}
+
+.btn-ghost:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Focus state for buttons */
+.btn-primary:focus,
+.btn-ghost:focus {
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.4);
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .card {
+    padding: 24px 18px;
+  }
+
+  .title {
+    font-size: 1.45rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+}
